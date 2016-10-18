@@ -18,3 +18,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+Route::resource('/type', 'TypesController');
+Route::get('/type/{id}/history', 'TypesController@history');
+Route::resource('/result', 'ResultsController');
